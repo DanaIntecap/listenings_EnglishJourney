@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="English Journey interactive listening practice">
+  <title>English Journey Listening Practice</title>
+  <link rel="icon" href="favicon.svg">
+  <link rel="shortcut icon" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@600;700&family=Montserrat:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="brand-banner">
+    <div class="brand-mark" aria-hidden="true">EJ</div>
+    <div>
+      <p class="eyebrow">LISTEN • LEARN • GROW</p>
+      <h1>ENGLISH JOURNEY</h1>
+    </div>
+  </header>
+
+  <main class="app-shell">
+    <section class="intro" aria-labelledby="page-title">
+      <p class="kicker">LISTENING LAB</p>
+      <h2 id="page-title">Practice your listening, one journey at a time.</h2>
+      <p>Choose a lesson, listen carefully, and check what you understood.</p>
+    </section>
+
+    <section class="selector-panel" aria-labelledby="choose-heading">
+      <h3 id="choose-heading">Choose your activity</h3>
+      <div class="selector-grid">
+        <label>Level<select id="level-select" name="level"><option value="">Select level</option></select></label>
+        <label>Sub-level<select id="sublevel-select" name="sublevel" disabled><option value="">Select sub-level</option></select></label>
+        <label>Unit<select id="unit-select" name="unit" disabled><option value="">Select unit</option></select></label>
+        <label>Activity<select id="activity-select" name="activity" disabled><option value="">Select activity</option></select></label>
+      </div>
+      <p id="data-status" class="status" role="status" aria-live="polite">Loading activities…</p>
+    </section>
+
+    <section id="activity" class="activity" hidden aria-labelledby="activity-title">
+      <div class="activity-heading">
+        <div>
+          <p id="activity-path" class="kicker"></p>
+          <h2 id="activity-title"></h2>
+          <div id="topic-list" class="chips" aria-label="Topics"></div>
+        </div>
+        <span id="listening-level" class="level-badge"></span>
+      </div>
+
+      <figure id="picture-wrap" class="lesson-picture" hidden>
+        <img id="lesson-picture" alt="" loading="lazy">
+        <figcaption id="picture-note" hidden>Lesson image is not available yet.</figcaption>
+      </figure>
+
+      <section class="listen-panel" aria-labelledby="listen-heading">
+        <div class="section-number" aria-hidden="true">1</div>
+        <div class="section-content">
+          <h3 id="listen-heading">Listen</h3>
+          <p>Play the recording as many times as you need.</p>
+          <audio id="audio-player" controls preload="metadata">Your browser does not support the audio player.</audio>
+          <p id="audio-note" class="media-note" hidden></p>
+          <a id="audio-link" class="external-link" target="_blank" rel="noopener noreferrer" hidden>Open listening source</a>
+        </div>
+      </section>
+
+      <form id="tf-form" class="quiz-panel" novalidate>
+        <div class="section-number" aria-hidden="true">2</div>
+        <div class="section-content">
+          <h3>True or false?</h3>
+          <p>Choose one answer for every statement.</p>
+          <div id="tf-questions"></div>
+          <button class="primary-button" type="submit">Check answers</button>
+          <div id="tf-result" class="result" role="status" aria-live="polite" hidden></div>
+        </div>
+      </form>
+
+      <form id="open-form" class="quiz-panel" novalidate>
+        <div class="section-number" aria-hidden="true">3</div>
+        <div class="section-content">
+          <h3>Answer in your own words</h3>
+          <p>Short answers are fine. Spelling and punctuation do not need to be perfect.</p>
+          <div id="open-questions"></div>
+          <button class="primary-button" type="submit">Check answers</button>
+          <div id="open-result" class="result" role="status" aria-live="polite" hidden></div>
+        </div>
+      </form>
+
+      <aside id="data-note" class="data-note" hidden><strong>Instructor data note:</strong> The direct questions in this activity are duplicated from “Shopping: Past and Present” in the source workbook. Review them before classroom use.</aside>
+    </section>
+
+    <details class="instructor-guide">
+      <summary>Instructor guide: adding lesson media</summary>
+      <div>
+        <p>Upload audio files to <code>assets/audio/</code> and images to <code>assets/images/</code>. In <code>listening.json</code>, use only the filename in <code>audioFile</code> or <code>pictureName</code>; the app builds the correct relative path.</p>
+        <p>Fully qualified audio links in <code>audioUrl</code> remain supported. Some lesson-page links cannot play inside the native audio player, so the app also provides an “Open listening source” link.</p>
+      </div>
+    </details>
+  </main>
+  <footer>Keep listening. Keep growing. <span aria-hidden="true">●</span> English Journey</footer>
+</body>
+</html>

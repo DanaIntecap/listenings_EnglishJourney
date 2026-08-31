@@ -1,0 +1,68 @@
+[
+  {
+    "id": "a1-2-u1-marco",
+    "title": "Marco's Personal Profile",
+    "level": "A1",
+    "subLevel": "A1.2",
+    "unit": 1,
+    "audioUrl": "https://storage.googleapis.com/english-4-a-whole-life-a1-2/mARCO25.mp3",
+    "pictureName": "A1-2-001-Marco.png",
+    "topics": ["personal profile", "adjectives", "age", "occupations"],
+    "listeningLevel": "Intermediate",
+    "trueFalse": [{"question":"He is tall and athletic.","answer":true},{"question":"He wakes up late.","answer":false},{"question":"He is a baker.","answer":false},{"question":"He loves spending time with his family.","answer":true}],
+    "direct": [{"question":"What are his hobbies?","answer":"He likes cycling and baking."},{"question":"How old is Marco?","answer":"He is 35 years old."},{"question":"What is his occupation?","answer":"He is a baker."},{"question":"What time does he wake up?","answer":"He wakes up at 4:00 AM."}]
+  },
+  {
+    "id": "a1-2-u1-office",
+    "title": "The Office Environment",
+    "level": "A1",
+    "subLevel": "A1.2",
+    "unit": 1,
+    "audioUrl": "https://storage.googleapis.com/english-4-a-whole-life-a1-2/Contrasting%20adjectives%20-%20listening.mp3",
+    "pictureName": "A1-2-002-Office.png",
+    "topics": ["office", "furniture", "colleagues", "descriptive adjectives"],
+    "listeningLevel": "Intermediate",
+    "trueFalse": [{"question":"The whiteboard in the office is small.","answer":false},{"question":"The speaker's co-workers say they are nice and polite.","answer":true},{"question":"The speaker is in their 20s.","answer":true},{"question":"The chair is modern and comfortable.","answer":false},{"question":"The speaker drinks hot coffee.","answer":true}],
+    "direct": [{"question":"What color or size is the whiteboard in the office?","answer":"The whiteboard is big."},{"question":"How old are the speaker's colleagues?","answer":"The colleagues are between 30 and 60 years old."},{"question":"Is the chair comfortable or uncomfortable?","answer":"The chair is uncomfortable."},{"question":"What gets cold under the desk?","answer":"The speaker's feet get cold under the desk."},{"question":"Is the laptop cheap or expensive?","answer":"The laptop is expensive."}]
+  },
+  {
+    "id": "a2-1-u1-shopping",
+    "title": "Shopping: Past and Present",
+    "level": "A2",
+    "subLevel": "A2.1",
+    "unit": 1,
+    "audioUrl": "https://app.chalkie.ai/lessons/a2709849-6692-4712-b0a7-ac216e0e916e?ref=PWBBUYYG",
+    "pictureName": "A2-1-001-Shopping_past_present.png",
+    "topics": ["shopping vocabulary"],
+    "listeningLevel": "Intermediate",
+    "trueFalse": [{"question":"Marco prefers using cash because it is faster.","answer":false},{"question":"Marco prefers using cash because it is faster.","answer":true},{"question":"Yes","answer":true},{"question":"Yes","answer":true}],
+    "direct": [{"question":"Shopping: Past and Present","answer":"It costs five dollars"},{"question":"How much was coffee when Marco was a child?","answer":"It was fifty cents."},{"question":"What does Elena say about the supermarket stock today?","answer":"The supermarket has everything (more products)."},{"question":"What is one benefit of shopping nowadays according to Marco?","answer":"Paying with a card is much faster than using cash."}]
+  },
+  {
+    "id": "a2-1-u1-amy",
+    "title": "Amy's day",
+    "level": "A2",
+    "subLevel": "A2.1",
+    "unit": 1,
+    "audioUrl": "https://storage.googleapis.com/english-4-a-whole-life-a1-2/a2-1%20u1%20was%20were%201.mp3",
+    "pictureName": "",
+    "topics": ["simple past", "was/were", "sick"],
+    "listeningLevel": "Beginner",
+    "reviewDirectQuestions": true,
+    "trueFalse": [{"question":"Yesterday, Amy was happy","answer":false},{"question":"Amy was sad because she was sick","answer":true},{"question":"She was at school all day","answer":false},{"question":"Her frinds wren't with her","answer":true}],
+    "direct": [{"question":"Shopping: Past and Present","answer":"It costs five dollars"},{"question":"How much was coffee when Marco was a child?","answer":"It was fifty cents."},{"question":"What does Elena say about the supermarket stock today?","answer":"The supermarket has everything (more products)."},{"question":"What is one benefit of shopping nowadays according to Marco?","answer":"Paying with a card is much faster than using cash."}]
+  },
+  {
+    "id": "a2-1-u1-clothing",
+    "title": "A trip to the clothing store",
+    "level": "A2",
+    "subLevel": "A2.1",
+    "unit": 1,
+    "audioUrl": "https://app.chalkie.ai/lessons/a27eaded-96b9-4979-8877-12933197f949",
+    "pictureName": "",
+    "topics": ["shopping vocabulary"],
+    "listeningLevel": "Intermediate",
+    "trueFalse": [{"question":"Mark wants to visit the clearance section first","answer":true},{"question":"The blue blouse is the correct size for Lisa","answer":false},{"question":"The clothing brand has a 20 percent discount","answer":true},{"question":"Customers are allowed to bargain for prices in this store","answer":false}],
+    "direct": [{"question":"Where are the speakers?","answer":"They are at the mall or clothing boutique."},{"question":"Where are they looking for sales?","answer":"They are looking for sales at the clearance section."},{"question":"Can they bargain at the store?","answer":"No, they can't."}]
+  }
+]
