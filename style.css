@@ -90,6 +90,21 @@ summary {
 .institutional-content h2 { color: var(--green); margin-top: 20px; font-size: 18px; }
 .institutional-content code { background:#e2eaee; padding:2px 5px; border-radius:4px; font-size:.85em; }
 
+/* Guía docente y aviso de uso, visibles antes de elegir la actividad. */
+.usage-notice {
+    background: #fff7ce;
+    border-left: 5px solid #a78000;
+    border-radius: 10px;
+    padding: 15px 20px;
+    margin-bottom: 25px;
+}
+details.ficha-pedagogica {
+    background: #f3effa;
+    border-left-color: #6a3fa0;
+}
+.ficha-pedagogica summary,
+.ficha-pedagogica .institutional-content h2 { color: #6a3fa0; }
+
 /* Panel de filtros / configuración */
 .settings-box {
     background: var(--box);
