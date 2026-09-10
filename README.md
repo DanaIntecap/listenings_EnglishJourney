@@ -17,7 +17,7 @@ These are referenced by filename in `index.html`; place them in the repository r
 ## Adding media
 
 - Put audio files in `assets/audio/` and set `audioFile` in `listening.json` to the filename only. The app resolves it as `assets/audio/<audioFile>`.
-- Put lesson images in `assets/images/` and set `pictureName` to the filename only. The app resolves it as `assets/images/<pictureName>`.
+- Put PNG lesson images in `assets/images/<subLevel>/Unit<unit>/`. Use the title in lowercase without spaces or punctuation as the filename (for example, `marcospersonalprofile.png`). Set `pictureName` to the relative path, for example `A1.2/Unit1/marcospersonalprofile.png`. The app resolves it under `assets/images/`. The workbook uses the same relative path in `Picture name`.
 - Fully qualified external sources can remain in `audioUrl`. Direct audio-file URLs play in the native player; lesson-page URLs are also offered as external links.
 
 The `.gitkeep` files keep the empty media folders present in Git until you add your own files.

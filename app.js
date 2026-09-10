@@ -39,7 +39,7 @@ function renderLesson(lesson) {
   $("listening-level").textContent=`${lesson.listeningLevel} listening`;
   $("topic-list").replaceChildren(...lesson.topics.map(t=>{const s=document.createElement("span");s.className="chip";s.textContent=t;return s;}));
   const wrap=$("picture-wrap"), img=$("lesson-picture"), picNote=$("picture-note");
-  if(lesson.pictureName){wrap.hidden=false;picNote.hidden=true;img.hidden=false;img.alt=`Illustration for ${lesson.title}`;img.src=`assets/images/${encodeURIComponent(lesson.pictureName)}`;img.onerror=()=>{img.hidden=true;picNote.hidden=false;};}else{wrap.hidden=true;img.removeAttribute("src");}
+  if(lesson.pictureName){wrap.hidden=false;picNote.hidden=true;img.hidden=false;img.alt=`Illustration for ${lesson.title}`;img.src=`assets/images/${lesson.pictureName.split("/").map(encodeURIComponent).join("/")}`;img.onerror=()=>{img.hidden=true;picNote.hidden=false;};}else{wrap.hidden=true;img.removeAttribute("src");}
   const audio=$("audio-player"), note=$("audio-note"), link=$("audio-link");
   const source=lesson.audioFile?`assets/audio/${encodeURIComponent(lesson.audioFile)}`:lesson.audioUrl;
   audio.src=source||"";audio.load();note.hidden=true;link.hidden=true;
