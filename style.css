@@ -175,6 +175,8 @@ select:focus, input:focus, button:focus-visible, summary:focus-visible, a:focus-
 .section-block > p { color: var(--muted); margin-top: -2px; }
 
 audio { width:100%; margin-top:8px; }
+video, #youtube-player { width:100%; aspect-ratio:16/9; border:0; border-radius:10px; background:#000; margin-top:8px; }
+[hidden] { display:none !important; }
 .media-note { font-size:.85rem; margin:10px 0 0 !important; color:var(--muted); }
 .external-link { display:inline-block; color:var(--blue); font-weight:600; margin-top:9px; }
 

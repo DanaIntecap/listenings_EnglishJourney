@@ -55,7 +55,9 @@
         "question": "What time does he wake up?",
         "answer": "He wakes up at 4:00 AM."
       }
-    ]
+    ],
+    "mediaType": "audio",
+    "mediaUrl": "https://storage.googleapis.com/english-4-a-whole-life-a1-2/mARCO25.mp3"
   },
   {
     "id": "a1-2-u1-office",
@@ -121,7 +123,9 @@
         "question": "Is the laptop cheap or expensive?",
         "answer": "The laptop is expensive."
       }
-    ]
+    ],
+    "mediaType": "audio",
+    "mediaUrl": "https://storage.googleapis.com/english-4-a-whole-life-a1-2/Contrasting%20adjectives%20-%20listening.mp3"
   },
   {
     "id": "a2-1-u1-shopping",
@@ -176,7 +180,9 @@
         "question": "What is one benefit of shopping nowadays according to Marco?",
         "answer": "Paying with a card is much faster than using cash."
       }
-    ]
+    ],
+    "mediaType": "audio",
+    "mediaUrl": "https://app.chalkie.ai/lessons/a2709849-6692-4712-b0a7-ac216e0e916e?ref=PWBBUYYG"
   },
   {
     "id": "a2-1-u1-amy",
@@ -234,7 +240,9 @@
         "question": "What is one benefit of shopping nowadays according to Marco?",
         "answer": "Paying with a card is much faster than using cash."
       }
-    ]
+    ],
+    "mediaType": "audio",
+    "mediaUrl": "https://storage.googleapis.com/english-4-a-whole-life-a1-2/a2-1%20u1%20was%20were%201.mp3"
   },
   {
     "id": "a2-1-u1-clothing",
@@ -285,6 +293,8 @@
         "question": "Can they bargain at the store?",
         "answer": "No, they can't."
       }
-    ]
+    ],
+    "mediaType": "audio",
+    "mediaUrl": "https://app.chalkie.ai/lessons/a27eaded-96b9-4979-8877-12933197f949"
   }
 ]

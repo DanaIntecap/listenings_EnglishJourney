@@ -127,7 +127,9 @@
         <div class="section-block">
             <h3>🔊 Listen</h3>
             <p>Listen with your instructor: first for the main idea, then for details.</p>
-            <audio id="audio-player" controls preload="metadata">Your browser does not support the audio player.</audio>
+            <audio id="audio-player" controls preload="metadata" hidden>Your browser does not support the audio player.</audio>
+            <video id="video-player" controls playsinline preload="metadata" hidden>Your browser does not support the video player.</video>
+            <iframe id="youtube-player" title="Listening video on YouTube" allow="encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen hidden></iframe>
             <p id="audio-note" class="media-note" hidden></p>
             <a id="audio-link" class="external-link" target="_blank" rel="noopener noreferrer" hidden>Open listening source</a>
         </div>
@@ -153,6 +155,7 @@
 
 </div>
 
+<script src="media.js" defer></script>
 <script src="app.js" defer></script>
 </body>
 </html>

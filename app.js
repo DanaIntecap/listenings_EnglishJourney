@@ -11,7 +11,31 @@ function setOptions(select, values, placeholder) { select.replaceChildren(option
 function byLevel() { return lessons.filter(x=>!els.level.value||x.level.includes(els.level.value)); }
 function bySub() { return byLevel().filter(x=>!els.sub.value||x.subLevel.includes(els.sub.value)); }
 function filtered() { return bySub().filter(x=>!els.unit.value||x.unit.includes(els.unit.value)); }
-function resetActivity() { els.activity.value=""; $("activity").hidden=true; $("tf-form").reset(); $("open-form").reset(); }
+function stopMedia() {
+  for (const id of ['audio-player','video-player']) {
+    const player=$(id); player.onerror=null; player.pause(); player.removeAttribute('src'); player.load(); player.hidden=true;
+  }
+  $('youtube-player').removeAttribute('src'); $('youtube-player').hidden=true;
+}
+function renderMedia(lesson) {
+  stopMedia();
+  const note=$('audio-note'), link=$('audio-link');
+  note.hidden=true; link.hidden=true; link.removeAttribute('href');
+  const media=resolveListeningMedia(lesson);
+  if(media.error){note.textContent=media.error;note.hidden=false;return;}
+  const player=$(media.type==='youtube'?'youtube-player':media.type==='video'?'video-player':'audio-player');
+  link.href=media.link;link.hidden=false;
+  player.hidden=false;
+  if(media.type==='youtube') {
+    player.title=`Listening video: ${lesson.title}`;
+    note.textContent='If the video is unavailable here, open the source link below with your instructor.';note.hidden=false;
+  } else {
+    player.onerror=()=>{note.textContent='This source cannot play here. Open the source link below with your instructor.';note.hidden=false;};
+  }
+  player.src=media.source;
+  if(media.type!=='youtube')player.load();
+}
+function resetActivity() { stopMedia(); els.activity.value=""; $("activity").hidden=true; $("tf-form").reset(); $("open-form").reset(); }
 
 els.level.addEventListener("change",()=>{
   setOptions(els.sub, unique(byLevel().flatMap(x=>x.subLevel)), "Sub-nivel");
@@ -40,11 +64,7 @@ function renderLesson(lesson) {
   $("topic-list").replaceChildren(...lesson.topics.map(t=>{const s=document.createElement("span");s.className="chip";s.textContent=t;return s;}));
   const wrap=$("picture-wrap"), img=$("lesson-picture"), picNote=$("picture-note");
   if(lesson.pictureName){wrap.hidden=false;picNote.hidden=true;img.hidden=false;img.alt=`Illustration for ${lesson.title}`;img.src=`assets/images/${lesson.pictureName.split("/").map(encodeURIComponent).join("/")}`;img.onerror=()=>{img.hidden=true;picNote.hidden=false;};}else{wrap.hidden=true;img.removeAttribute("src");}
-  const audio=$("audio-player"), note=$("audio-note"), link=$("audio-link");
-  const source=lesson.audioFile?`assets/audio/${encodeURIComponent(lesson.audioFile)}`:lesson.audioUrl;
-  audio.src=source||"";audio.load();note.hidden=true;link.hidden=true;
-  if(lesson.audioUrl){link.href=lesson.audioUrl;link.hidden=false;}
-  audio.onerror=()=>{note.textContent="This source cannot play in the embedded player. Use the source link below or ask your instructor for the audio file.";note.hidden=false;};
+  renderMedia(lesson);
   renderTF(lesson); renderOpen(lesson); $("data-note").hidden=!lesson.reviewDirectQuestions; $("activity").hidden=false; $("activity-title").focus?.({preventScroll:true});
 }
 
